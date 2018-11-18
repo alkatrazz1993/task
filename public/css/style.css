@@ -1,0 +1,60 @@
+*{
+outline: none;
+}
+
+p{
+    font-size: 20px;
+}
+
+table{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.clearfix:after 
+{
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.table th{
+    padding: .50rem !important;
+}
+
+.pagination{
+    text-align: center;
+}
+.btn-primary{
+    margin-top: 5px !important;
+}
+
+.zodiacs{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.form-control{
+    width: 100% !important;
+}
+
+.form{
+    padding: 20px;
+    width: 350px;
+    margin: 0 auto;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+textarea{
+	width: 100%;
+}
