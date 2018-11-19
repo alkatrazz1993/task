@@ -37,6 +37,11 @@ class CreateUserFieldsTable extends Migration
      */
     public function down()
     {
+        Schema::table('user_field_values', function (Blueprint $table) {
+            $table->dropForeign(['user_field_id']);
+            $table->dropColumn('user_field_id');
+        });
+
         Schema::dropIfExists('user_fields');
     }
 }

@@ -32,7 +32,7 @@
 
         <form method="POST" class="form" action="/forecasts">
             <label for="exampleInputSelectZodiacs" class="mr-sm-2">Zodiac Name:</label>
-            <select name="zodiacName" id="exampleInputSelectZodiacs" class="custom-select">
+            <select name="zodiacName" id="exampleInputSelectZodiacs" class="custom-select" required>
                 @foreach($zodiacs as $name)
                     <option value="{{ $name->id }}">{{ $name->name }}</option>
                 @endforeach
@@ -46,7 +46,7 @@
 
 
             <label for="exampleInputSelectForecastType" class="mr-sm-2">Forecast Type:</label>
-            <select name="forecast_type_id" id="exampleInputSelectForecastType" class="custom-select">
+            <select name="forecast_type_id" id="exampleInputSelectForecastType" class="custom-select" required>
                 @foreach($forecasts_type as $type)
                     <option value="{{ $type->id }}">{{ $type->name }}</option>
                 @endforeach

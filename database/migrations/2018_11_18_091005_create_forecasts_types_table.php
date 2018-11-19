@@ -37,6 +37,11 @@ class CreateForecastsTypesTable extends Migration
      */
     public function down()
     {
+        Schema::table('forecasts', function (Blueprint $table) {
+            $table->dropForeign(['forecasts_type_id']);
+            $table->dropColumn('forecasts_type_id');
+        });
+
         Schema::dropIfExists('forecasts_types');
     }
 }

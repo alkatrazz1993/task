@@ -156,7 +156,7 @@ class ForecastsController extends Controller
             $date = Carbon::now()->addMonth()->format("Y-m-01");
         }
         else if ($typeId == 2){
-            $date = date('Y-m-d', strtotime("last Monday"));
+            $date = date('Y-m-d', strtotime("monday this week"));
         }
         else if ($typeId == 3){
             $date = Carbon::now()->subDay()->format("Y-m-d");

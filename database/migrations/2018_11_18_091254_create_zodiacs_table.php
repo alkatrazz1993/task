@@ -37,6 +37,11 @@ class CreateZodiacsTable extends Migration
      */
     public function down()
     {
+        Schema::table('forecasts', function (Blueprint $table) {
+            $table->dropForeign(['zodiac_id']);
+            $table->dropColumn('zodiac_id');
+        });
+
         Schema::dropIfExists('zodiacs');
     }
 }

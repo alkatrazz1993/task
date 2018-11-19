@@ -11,7 +11,7 @@ class UserFieldValuesSeeder extends Seeder
      */
     public function run()
     {
-        for( $i = 1; $i <= 250; $i++ ) {
+        for( $i = 1; $i <= 200; $i++ ) {
 
             DB::table('user_field_values')->insert([
                 'value' => '1920-12-23',
@@ -22,7 +22,7 @@ class UserFieldValuesSeeder extends Seeder
             ]);
         }
 
-        for( $i = 1; $i <= 50; $i++ ) {
+        for( $i = 201; $i <= 250; $i++ ) {
 
             DB::table('user_field_values')->insert([
                 'value' => '1920-11-23',
@@ -32,5 +32,17 @@ class UserFieldValuesSeeder extends Seeder
                 'user_field_id' => 1
             ]);
         }
+
+        for( $i = 251; $i <= 300; $i++ ) {
+
+            DB::table('user_field_values')->insert([
+                'value' => '1921-01-17',
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
+                'user_id' => $i,
+                'user_field_id' => 1
+            ]);
+        }
+
     }
 }

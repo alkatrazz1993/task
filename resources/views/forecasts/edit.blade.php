@@ -23,7 +23,7 @@
                 @endforeach
             </select>
 
-            <input name="id" type="hidden" class="form-control mb-2 mr-sm-2" value="{{ $forecast->id }}" id="idItem">
+            <input name="id" type="hidden" class="form-control mb-2 mr-sm-2" value="{{ $forecast->id }}" id="idItem" required>
             <p><small>Last update: <strong>{{ $forecast->updated_at }}</strong></small></p>
             <p><button type="submit" class="btn btn-primary mb-2">Update</button></p>
 
